@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* RESET E CONFIGURAÇÃO GERAL */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a fonte padrão para todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura dos elementos */
+}
+
+/* ELEMENTOS DA INTERFACE */
+
+/* Configurações gerais do body */
+body {
+    background-color: #15142b; /* Cor de fundo sólida para o body */
+    background-image: linear-gradient(180deg, #372991, #15142b); /* Gradiente de fundo do body */
+    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+    background-position: center center; /* Posiciona a imagem de fundo no centro */
+    background-size: cover; /* Cobre todo o body com a imagem de fundo */
+    background-attachment: fixed; /* A imagem de fundo não rola com o conteúdo */
+
+    display: flex; /* Usa Flexbox para layout do body */
+    flex-direction: column; /* Organiza itens em uma coluna */
+    flex-wrap: nowrap; /* Não permite que os itens quebrem para uma nova linha */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 0; /* Remove as margens padrão */
+    height: 100vh; /* Define a altura do body como 100% da altura da viewport */
+}
+
+/* Configurações gerais de largura para header, main, section e article */
+header, main, section, article {
+    max-width: 700px; /* Largura máxima dos elementos */
+    width: 100%; /* Largura total dos elementos */
+}
+
+/* Estilo do cabeçalho */
+header > h1 {
+    color: white; /* Cor do texto do cabeçalho */
+    text-shadow: 3px 3px 0px black; /* Adiciona sombra ao texto para contraste */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do conteúdo principal e seções */
+main, section, article {
+    background-color: white; /* Cor de fundo branca para o conteúdo */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento abaixo dos elementos */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502); /* Sombra para profundidade */
+}
+
+/* Estilo do rodapé */
+footer {
+    display: block; /* Exibe o footer como bloco */
+    width: 100%; /* Largura total */
+    background-color: #291f6c; /* Cor de fundo do footer */
+    color: white; /* Cor do texto do footer */
+    text-align: center; /* Centraliza o texto */
+    margin-top: auto; /* Posiciona o footer na parte inferior do viewport */
+    padding: 5px; /* Espaçamento interno */
+}
+
+/* Estilo de parágrafos */
+p {
+    text-align: justify; /* Justifica o texto dos parágrafos */
+    line-height: 1.5em; /* Define a altura da linha para melhor legibilidade */
+}
+
+/* Estilo dos títulos h2, h3, h4 */
+h2, h3, h4 {
+    color: #372991; /* Cor dos textos dos títulos */
+    margin: 0 0 10px 0; /* Margem inferior */
+}
+
+/* Estilo dos links */
+a {
+    color: #15142b; /* Cor do texto dos links */
+    background-color: rgba(55, 41, 145, 0.1); /* Cor de fundo translúcida dos links */
+    padding: 0 3px; /* Espaçamento interno dos links */
+    font-weight: 600; /* Peso da fonte dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    border-bottom: .5px dotted #372991; /* Adiciona uma borda pontilhada abaixo dos links */
+}
+
+/* Estilo dos links ao passar o mouse */
+a:hover {
+    color: #372991; /* Cor do texto dos links ao passar o mouse */
+    border-bottom: 1px solid #372991; /* Borda sólida abaixo dos links ao passar o mouse */
+}
+
+/* FORMULÁRIO */
+
+/* Estilo geral do formulário */
+form {
+    background-color: rgba(55, 41, 145, 0.2); /* Cor de fundo translúcida do formulário */
+    padding: 15px; /* Espaçamento interno do formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima do formulário */
+    width: 100%; /* Largura total do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+}
+
+/* Estilo das labels do formulário */
+form label {
+    display: block; /* Exibe a label como bloco */
+    width: fit-content; /* Ajusta a largura da label para o conteúdo */
+    font-size: 0.8em; /* Tamanho da fonte das labels */
+    font-weight: 100; /* Peso da fonte das labels */
+    background-color: rgba(55, 41, 145, 0.2); /* Cor de fundo translúcida das labels */
+    padding: 3px 7px; /* Espaçamento interno das labels */
+    margin-top: 10px; /* Margem superior das labels */
+    margin-bottom: 0px; /* Remove a margem inferior */
+    border-radius: 5px; /* Bordas arredondadas das labels */
+}
+
+/* Estilo dos campos de entrada do formulário */
+input[type=text], input[type=number], select, input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    width: 100%; /* Largura total dos campos */
+    padding: 12px 20px; /* Espaçamento interno dos campos */
+    font-size: 1em; /* Tamanho da fonte dos campos */
+    margin: 8px 0; /* Margem superior e inferior dos campos */
+    display: inline-block; /* Exibe os campos em linha com outras etiquetas */
+    border: 1px solid #ccc; /* Borda cinza clara dos campos */
+    border-radius: 4px; /* Bordas arredondadas dos campos */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+  
+/* Estilo do botão de envio do formulário */
+input[type=submit] {
+    width: 100%; /* Largura total do botão */
+    background-color: #4CAF50; /* Cor de fundo verde do botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 5px 0; /* Margem superior e inferior do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+  
+/* Estilo do botão de envio ao passar o mouse */
+input[type=submit]:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo do botão de redefinir */
+input[type=reset] {
+    width: 100%; /* Largura total do botão */
+    background-color: #eb9903; /* Cor de fundo laranja do botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 5px 0; /* Margem superior e inferior do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+
+input[type=reset]:hover {
+    background-color: #c27013; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo dos botões gerais */
+input[type=button], button {
+    width: 100%; /* Largura total do botão */
+    background-color: #372991; /* Cor de fundo roxa do botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 5px 0; /* Margem superior e inferior do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+
+/* Estilo dos botões ao passar o mouse */
+input[type=button]:hover, button:hover {
+    background-color: #291f6c; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo dos fieldsets */
+fieldset {
+    border: 0.5px dotted #372991; /* Borda pontilhada dos fieldsets */
+}
+
+/* Estilo dos legends dentro de fieldsets */
+fieldset > legend {
+    font-size: 0.8em; /* Tamanho da fonte do legend */
+    font-weight: 100; /* Peso da fonte do legend */
+    background-color: rgba(57, 48, 116, 0.2); /* Cor de fundo translúcida do legend */
+    padding: 3px 7px; /* Espaçamento interno do legend */
+    border-radius: 5px; /* Bordas arredondadas do legend */
+}
+
+/* Estilo das labels de radio e checkbox */
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block; /* Exibe as labels em linha com outros elementos */
+    font-size: 1em; /* Tamanho da fonte das labels */
+    background-color: rgba(0, 0, 0, 0); /* Cor de fundo transparente das labels */
+}
